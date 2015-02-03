@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html ng-app="serviceManagementApp">
+<head>
+    <script src="scripts/thirdparty/angular.js"></script>
+    <script src="scripts/thirdparty/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/example.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div ng-controller="RunningServicesCtlr as controller">
+        <p>
+            <button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
+            <button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+        </p>
+
+        <accordion close-others="true">
+            <accordion-group heading="Created services" is-open="status.isFirstOpen" >
+                <accordion-group heading="{{service.AddInName}}" ng-repeat="service in controller.services">
+                    {{service.AddInDescription}}
+                </accordion-group>
+            </accordion-group>
+            <accordion-group heading="Found AddIns">
+                <p>The body of the accordion group grows to fit the contents</p>
+            </accordion-group>
+        </accordion>
+    </div>
+</body>
+</html>
