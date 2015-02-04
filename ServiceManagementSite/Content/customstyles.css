@@ -1,0 +1,10 @@
+.accordionHeader {
+    background-color: gray;
+    color: black;
+}
+
+.custom {
+    .panel-heading: {
+        background-color: red;
+     }
+}

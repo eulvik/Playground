@@ -4,56 +4,61 @@
     <script src="scripts/thirdparty/angular.js"></script>
     <script src="scripts/thirdparty/angular-ui/ui-bootstrap-tpls.js"></script>
     <script src="scripts/controllers.js"></script>
-    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="Content/customstyles.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="container-fluid">
         <img class="pull-right" src="Content/maria_logo.png"></img>
         <h1>Maria GDK services management</h1>
-        <accordion close-others="true">
-            <accordion-group is-open="status.runningServicesOpen" close-others="true">
-                <accordion-heading>
+        <div class="custom">
+          <accordion close-others="true">
+              <accordion-group is-open="status.runningServicesOpen" close-others="true">
+                  <accordion-heading>
                     <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.runningServicesOpen, 'glyphicon-chevron-right': !status.runningServicesOpen}"></i>
-                    <h4>Service Instances</h4>
-                </accordion-heading>
-                <accordion close-others="false">
-                    <accordion-group ng-repeat="service in services">
-                        <accordion-heading>
-                            <i class="pull-right glyphicon" ng-class="{'glyphicon-thumbs-up': service.isRunning, 'glyphicon-thumbs-down': !service.isRunning}"></i>
-                            <h5>{{service.AddInName}}</h5>
-                        </accordion-heading>
-                        <dl class="dl-horizontal">
-                            <dt>State</dt>
-                            <dd>{{service.ServiceState}}</dd>
-                            <dt>Service Uri</dt>
-                            <dd>{{service.ServiceUri}}</dd>
-                            <dt>Description</dt>
-                            <dd>{{service.AddInDescription}}</dd>
-                        </dl>
-                    </accordion-group>
-                </accordion>
-            </accordion-group>
-            <accordion-group heading="Found AddIns" is-open="status.addinsServicesOpen">
-                <accordion-heading>
-                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.addinsServicesOpen, 'glyphicon-chevron-right': !status.addinsServicesOpen}"></i>
-                    <h4>Available AddIns</h4>
-                </accordion-heading>
-                <accordion close-others="false">
-                    <accordion-group ng-repeat="addin in addins" close-others="true">
-                        <accordion-heading>
-                            <h5>{{addin.Name}}</h5>
-                        </accordion-heading>
-                        <dl class="dl-horizontal">
-                            <dt>Description</dt>
-                            <dd>{{addin.Description}}</dd>
-                            <dt>Version</dt>
-                            <dd>{{addin.Version}}</dd>
-                        </dl>
-                        <button>TODO:create instance</button>
-                    </accordion-group>
-                </accordion>
-            </accordion-group>
-        </accordion>
+                    <h4>Service Instances <span class="badge">{{numRunningServices}}</span></h4>
+                  </accordion-heading>
+                  <accordion close-others="false">
+                      <accordion-group ng-repeat="service in services">
+                          <accordion-heading>
+                              <i class="pull-right glyphicon" ng-class="{'glyphicon-thumbs-up': service.isRunning, 'glyphicon-thumbs-down': !service.isRunning}"></i>
+                              <h5>{{service.AddInName}}</h5>
+                          </accordion-heading>
+                          <dl class="dl-horizontal">
+                              <dt>State</dt>
+                              <dd>{{service.ServiceState}}</dd>
+                              <dt>Service Uri</dt>
+                              <dd>{{service.ServiceUri}}</dd>
+                              <dt>Description</dt>
+                              <dd>{{service.AddInDescription}}</dd>
+                          </dl>
+                          <button ng-click="stopService(service.AddInInstanceId)" type="button" class="btn btn-default">Stop</button>
+                          <button ng-click="restartService(service.AddInInstanceId)" type="button" class="btn btn-default">Restart</button>
+                      </accordion-group>
+                  </accordion>
+              </accordion-group>
+              <accordion-group heading="Found AddIns" is-open="status.addinsServicesOpen">
+                  <accordion-heading>
+                      <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.addinsServicesOpen, 'glyphicon-chevron-right': !status.addinsServicesOpen}"></i>
+                      <h4>Available Add Ins <span class="badge">{{numAvailableAddins}}</span></h4>
+                  </accordion-heading>
+                  <accordion close-others="false">
+                      <accordion-group ng-repeat="addin in addins" close-others="true">
+                          <accordion-heading>
+                              <h5>{{addin.Name}}</h5>
+                          </accordion-heading>
+                          <dl class="dl-horizontal">
+                              <dt>Description</dt>
+                              <dd>{{addin.Description}}</dd>
+                              <dt>Version</dt>
+                              <dd>{{addin.Version}}</dd>
+                          </dl>
+                          <button ng-click="startService(addin.Id)" type="button" class="btn btn-default">Start Instance</button>
+                      </accordion-group>
+                  </accordion>
+              </accordion-group>
+          </accordion>
+      </div>
     </div>
 </body>
 </html>
