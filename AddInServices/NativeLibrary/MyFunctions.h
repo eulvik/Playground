@@ -1,8 +1,7 @@
 #pragma once
 #include <string>
 
-__declspec(dllexport)
-class MyFunctions
+class __declspec(dllexport) MyFunctions
 {
 public:
 	MyFunctions();
