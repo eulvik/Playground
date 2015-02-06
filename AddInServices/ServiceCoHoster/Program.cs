@@ -99,7 +99,7 @@ namespace ServiceCoHoster
                 {
                     var tokenToUse = tokens[selection - 1];
                     if (!_activatedTokens.ContainsKey(tokenToUse))
-                        _activatedTokens[tokenToUse] = tokenToUse.Activate<IServiceLoader>(AddInSecurityLevel.FullTrust);
+                        _activatedTokens[tokenToUse] = tokenToUse.Activate<IServiceLoader>(new AddInProcess(), AddInSecurityLevel.FullTrust);
 
                     return _activatedTokens[tokenToUse];
                 }

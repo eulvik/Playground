@@ -15,8 +15,10 @@ namespace MixedModeBridge {
 	public:
 		String^ GetHello()
 		{
-			MyFunctions* funcs = new MyFunctions();
-			std::string hello = funcs->getHello();
+			static MyFunctions funcs;
+
+			//MyFunctions* funcs = new MyFunctions();
+			std::string hello = funcs.getHello();
 			String^ result;
 			result = marshal_as<String^>(hello);
 
