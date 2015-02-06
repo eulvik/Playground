@@ -20,6 +20,8 @@ serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) 
           })
           .error(function (data, status, headers, config) {
               console.log(status);
+              $scope.services = null;
+              $scope.numRunningServices = 0;
           });
       }
 
@@ -33,6 +35,8 @@ serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) 
           })
           .error(function (data, status, headers, config) {
               console.log(status);
+              $scope.addins = null;
+              $scope.numAvailableAddins = 0;
           });
       }
 
@@ -74,6 +78,11 @@ serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) 
               .error(function (data, status, headers, config) {
                   console.log(status);
               });
+      }
+
+      $scope.updateData = function() {
+        $scope.updateAddIns();
+        $scope.updateServices();
       }
 
       $scope.numRunningServices = 0;
