@@ -66,6 +66,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
+    <Content Include="scripts\controllers.js" />
     <Content Include="scripts\thirdparty\angular-mocks.js" />
     <Content Include="scripts\thirdparty\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="scripts\thirdparty\angular-ui\ui-bootstrap-tpls.min.js" />
@@ -75,7 +76,6 @@
     <Content Include="scripts\thirdparty\angular.min.js" />
     <Content Include="scripts\thirdparty\bootstrap.js" />
     <Content Include="scripts\thirdparty\bootstrap.min.js" />
-    <Content Include="scripts\example.js" />
     <Content Include="scripts\thirdparty\npm.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
