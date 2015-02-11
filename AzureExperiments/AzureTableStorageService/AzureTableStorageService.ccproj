@@ -40,11 +40,9 @@
   <ItemGroup>
     <Folder Include="AzureTableStorageWebRoleContent" />
     <Folder Include="Profiles" />
-    <Folder Include="WCFServiceWebRole2Content\" />
   </ItemGroup>
   <ItemGroup>
     <DiagnosticsConfiguration Include="AzureTableStorageWebRoleContent\diagnostics.wadcfgx" />
-    <DiagnosticsConfiguration Include="WCFServiceWebRole2Content\diagnostics.wadcfgx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WCFServiceWebRole1\AzureTableStorageWebRole.csproj">

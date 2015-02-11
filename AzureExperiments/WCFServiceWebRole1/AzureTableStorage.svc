@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="AzureTableStorageWebRole.Service1" CodeBehind="AzureTableStorage.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AzureTableStorageWebRole.AzureTableStorage" CodeBehind="AzureTableStorage.svc.cs" %>

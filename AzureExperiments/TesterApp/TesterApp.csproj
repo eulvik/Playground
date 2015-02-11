@@ -56,13 +56,13 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference1\AzureTableStorage.wsdl" />
     <None Include="Service References\ServiceReference1\AzureTableStorage.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\AzureTableStorage1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

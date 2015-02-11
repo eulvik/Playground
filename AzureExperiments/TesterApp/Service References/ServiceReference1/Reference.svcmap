@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d724e66-7bf8-4531-8ab3-c5c1d360c41a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7700bdd4-3bb3-4485-9ce7-fb60b01d4d83" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:53537/AzureTableStorage.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AzureTableStorage.xsd" MetadataType="Schema" ID="5f1bb8fa-b0ed-41df-9895-c8f785111bd0" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="5c48b8d8-f8ca-499f-942f-5e15054bc7d3" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?wsdl" />
-    <MetadataFile FileName="AzureTableStorage1.xsd" MetadataType="Schema" ID="242b8651-fdae-4820-9674-dfa7c15a8875" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?xsd=xsd0" />
-    <MetadataFile FileName="AzureTableStorage.disco" MetadataType="Disco" ID="03beeb72-8ddf-471c-9c1d-082199ee22c2" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?disco" />
+    <MetadataFile FileName="AzureTableStorage.xsd" MetadataType="Schema" ID="e9f73d1b-2ca9-40b6-ba1a-13d9306bfec0" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?xsd=xsd1" />
+    <MetadataFile FileName="AzureTableStorage.wsdl" MetadataType="Wsdl" ID="15d539d2-05b0-4c4f-a446-bdcd5433f1f8" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?wsdl" />
+    <MetadataFile FileName="AzureTableStorage1.xsd" MetadataType="Schema" ID="4461d0bd-555b-425f-8e2e-10b57a79fabe" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?xsd=xsd0" />
+    <MetadataFile FileName="AzureTableStorage.disco" MetadataType="Disco" ID="c59d7602-5ca0-4245-b8a5-5b134c2afd1e" SourceId="1" SourceUrl="http://localhost:53537/AzureTableStorage.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
