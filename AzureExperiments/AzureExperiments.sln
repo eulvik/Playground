@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageService", "StorageService\StorageService.csproj", "{07660D45-A48F-4098-90E4-199D9890B49C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageServiceImplementation", "StorageServiceImplementation\StorageServiceImplementation.csproj", "{25257591-ED43-4DBF-B9BB-E924755251F5}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureTableStorageService", "AzureTableStorageService\AzureTableStorageService.ccproj", "{CD2010BF-0C94-4B07-8586-295CBAC6E56A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTableStorageWebRole", "WCFServiceWebRole1\AzureTableStorageWebRole.csproj", "{7F630AFA-074A-4266-B4B9-A63B6A58B372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterApp", "TesterApp\TesterApp.csproj", "{5B6AF57C-F67E-47A3-99BB-42449C9E80C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7F630AFA-074A-4266-B4B9-A63B6A58B372} = {7F630AFA-074A-4266-B4B9-A63B6A58B372}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07660D45-A48F-4098-90E4-199D9890B49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07660D45-A48F-4098-90E4-199D9890B49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07660D45-A48F-4098-90E4-199D9890B49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07660D45-A48F-4098-90E4-199D9890B49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25257591-ED43-4DBF-B9BB-E924755251F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25257591-ED43-4DBF-B9BB-E924755251F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25257591-ED43-4DBF-B9BB-E924755251F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25257591-ED43-4DBF-B9BB-E924755251F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2010BF-0C94-4B07-8586-295CBAC6E56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2010BF-0C94-4B07-8586-295CBAC6E56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2010BF-0C94-4B07-8586-295CBAC6E56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2010BF-0C94-4B07-8586-295CBAC6E56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F630AFA-074A-4266-B4B9-A63B6A58B372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F630AFA-074A-4266-B4B9-A63B6A58B372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F630AFA-074A-4266-B4B9-A63B6A58B372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F630AFA-074A-4266-B4B9-A63B6A58B372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6AF57C-F67E-47A3-99BB-42449C9E80C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6AF57C-F67E-47A3-99BB-42449C9E80C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6AF57C-F67E-47A3-99BB-42449C9E80C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6AF57C-F67E-47A3-99BB-42449C9E80C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
