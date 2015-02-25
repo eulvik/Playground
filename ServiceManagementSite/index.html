@@ -31,6 +31,8 @@
                               <dd>{{service.ServiceUri}}</dd>
                               <dt>Description</dt>
                               <dd>{{service.AddInDescription}}</dd>
+                              <dt>Running Since</dt>
+                              <dd>{{service.StartedTime}}</dd>
                           </dl>
                           <button ng-click="stopService(service.AddInInstanceId)" type="button" class="btn btn-default">Stop</button>
                           <button ng-click="restartService(service.AddInInstanceId)" type="button" class="btn btn-default">Restart</button>
@@ -59,6 +61,7 @@
               </accordion-group>
           </accordion>
           <button ng-click="updateData()" type="button" class="btn btn-default">Update Data</button>
+          <button ng-click="rescanAddIns()" type="button" class="btn btn-default">Discover AddIns</button>
       </div>
     </div>
 </body>

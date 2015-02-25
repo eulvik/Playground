@@ -1,7 +1,7 @@
 ﻿var serviceManagementApp = angular.module('serviceManagementApp', ['ui.bootstrap']);
 
 serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) {
-    var baseUri = "http://localhost:9008/manage/json/";
+    var baseUri = "http://localhost:9008/manage/web/json/";
 
     $scope.updateServices = function() {
       var uri = baseUri.concat("instances");
@@ -69,7 +69,6 @@ serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) 
       $scope.startService = function(addinId) {
           var url = baseUri.concat("start/");
           url = url.concat(addinId);
-          url = url.concat("/stuff");
           $http.get(url)
               .success(function (data, status, headers, config) {
                   console.log("Started service");
@@ -83,6 +82,18 @@ serviceManagementApp.controller('RunningServicesCtlr', function ($scope, $http) 
       $scope.updateData = function() {
         $scope.updateAddIns();
         $scope.updateServices();
+      }
+
+      $scope.rescanAddIns = function() {
+        var url = baseUri.concat("addins/rescan/true");
+        $http.get(url)
+            .success(function (data, status, headers, config) {
+                console.log("Rescanned addins");
+                $scope.updateData();
+            })
+            .error(function (data, status, headers, config) {
+                console.log(status);
+            });
       }
 
       $scope.numRunningServices = 0;
